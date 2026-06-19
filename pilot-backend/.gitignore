@@ -1,0 +1,46 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.iml
+out/
+
+# Build
+target/
+*.class
+*.jar
+*.war
+*.rar
+*.zip
+
+# Maven
+.m2/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Java
+*.ctxt
+
+# JUnit
+junit-platform-suite-json-reports/
+
+application-local.properties
