@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_obaveza_home.xml
+    Jedan red u listi "Predstojeće obaveze" na Home ekranu.
+
+    Boja tačke (iv_dot) i tekst rokova (tv_rok) se setuju dinamički iz koda:
+      • Crvena  (@color/pilot_error)   — rok za 1–3 dana
+      • Narandžasta (@color/pilot_warning) — rok za 4–7 dana
+      • Siva (@color/pilot_gray_border)   — ostalo / datum
+
+    Primer sadržaja:
+      tv_naziv   = "Ispit - Baze Podataka"
+      tv_lokacija = "FTN - Sala 101"
+      tv_rok     = "za 3 dana"  |  "za 8 dana"  |  "31. maj"
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_card_obaveza"
+    android:clickable="false"
+    android:focusable="false">
+
+    <!-- Tačka — boja = urgentnost -->
+    <View
+        android:id="@+id/iv_dot"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/shape_dot"
+        android:backgroundTint="@color/pilot_error" />
+
+    <!-- Naziv i lokacija -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_naziv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ispit - Baze Podataka"
+            android:textColor="@color/pilot_dark"
+            android:textSize="18sp"
+            android:textFontWeight="500"
+            android:fontFamily="@font/inter_semibold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tv_lokacija"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FTN - Sala 101"
+            android:textColor="@color/pilot_gray_border"
+            android:textSize="12sp"
+            android:textFontWeight="500"
+            android:fontFamily="@font/inter_regular" />
+
+    </LinearLayout>
+
+    <!-- Rok badge -->
+    <TextView
+        android:id="@+id/tv_rok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="za 3 dana"
+        android:textSize="12sp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/pilot_dark_red"
+        android:background="@drawable/bg_chip_dark_red"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp" />
+
+</LinearLayout>

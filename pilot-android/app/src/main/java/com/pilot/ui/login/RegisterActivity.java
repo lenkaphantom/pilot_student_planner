@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.google.android.material.snackbar.Snackbar;
 import com.pilot.R;
 import com.pilot.databinding.ActivityRegisterBinding;
+import com.pilot.ui.home.HomeActivity;
 import com.pilot.ui.onboarding.OnboardingActivity;
 
 /**
@@ -139,8 +140,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void navigateAfterRegister() {
         Intent intent;
         if (skipSetup) {
-            // TODO: zameni sa MainActivity
-            intent = new Intent(this, OnboardingActivity.class);
+            intent = new Intent(this, HomeActivity.class);
         } else {
             intent = new Intent(this, OnboardingActivity.class);
         }

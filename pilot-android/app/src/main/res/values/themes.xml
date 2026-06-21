@@ -10,6 +10,9 @@
         <item name="android:windowBackground">@color/pilot_background</item>
         <item name="android:statusBarColor">@color/pilot_background</item>
         <item name="android:windowLightStatusBar">true</item>
+        <!-- Inter kao default font za celu aplikaciju -->
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
     </style>
 
     <style name="Theme.Pilot.Splash" parent="Theme.Pilot">
@@ -93,6 +96,10 @@
         <item name="android:progressBackgroundTint">@color/pilot_gray_surface</item>
         <item name="android:minHeight">4dp</item>
         <item name="android:maxHeight">4dp</item>
+    </style>
+
+    <style name="Widget.Pilot.BottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconSize">32dp</item>
     </style>
 
 </resources>

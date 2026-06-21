@@ -36,4 +36,96 @@
     <string name="error_no_internet">Nema internet konekcije.</string>
     <string name="pilot_logo">PILOT logo</string>
     <string name="nazad">Nazad</string>
+
+    <!-- ── Navigation tabs ── -->
+    <string name="nav_chat">Chat</string>
+    <string name="nav_kalendar">Kalendar</string>
+    <string name="nav_home">Početna</string>
+    <string name="nav_prilike">Prilike</string>
+    <string name="nav_profil">Profil</string>
+
+    <!-- ── Home Screen ── -->
+    <!-- Pozdrav: "Dobro jutro, {ime}" — koristiti getString(R.string.greeting_morning, userName) -->
+    <string name="greeting_morning">Dobro jutro, %1$s</string>
+    <string name="greeting_day">Dobar dan, %1$s</string>
+    <string name="greeting_evening">Dobro veče, %1$s</string>
+
+    <string name="section_predstojeće_obaveze">PREDSTOJEĆE OBAVEZE</string>
+    <string name="section_prilike_za_tebe">PRILIKE ZA TEBE</string>
+
+    <!-- Kartica "Nastavi učenje" -->
+    <string name="nastavi_gde_si_stao">Nastavi gde si stao</string>
+    <string name="btn_nastavi_ucenje">Nastavi učenje →</string>
+
+    <!-- Rok badge tekstovi -->
+    <!-- Koristiti getString(R.string.rok_za_dana, brDana) -->
+    <string name="rok_za_dana">za %1$d dana</string>
+    <string name="rok_sutra">sutra</string>
+    <string name="rok_danas">danas</string>
+    <!-- Za ostale: prikazati datum direktno, npr. "31. maj" -->
+
+    <!-- Tip prilike chip -->
+    <string name="tip_stipendija">STIPENDIJA</string>
+    <string name="tip_praksa">PRAKSA</string>
+    <string name="tip_posao">POSAO</string>
+    <string name="tip_takmicenje">TAKMIČENJE</string>
+
+    <!-- Rok prilike -->
+    <!-- Koristiti getString(R.string.rok_prilike, datumString) -->
+    <string name="rok_prilike">Rok: %1$s</string>
+
+    <!-- ── Kalendar ekran ── -->
+    <string name="section_obaveze_na_dan">%1$d obaveze</string>  <!-- "2 obaveze" -->
+    <string name="chip_al_plan">AI plan</string>
+    <string name="chip_rok">Rok</string>
+    <string name="chip_danas">Danas</string>
+    <string name="chip_sutra">Sutra</string>
+    <string name="chip_zavrseno">Završeno</string>
+    <string name="btn_nastavi_ucenje_arrow">Nastavi učenje →</string>
+    <string name="label_napredak">Napredak</string>
+    <!-- "Baze Podataka - Ispit za 3 dana" — formirati u kodu -->
+    <string name="card_ispit_za_dana">%1$s - Ispit za %2$d dana</string>
+    <string name="label_sledece">Sledeće: %1$s</string>
+
+    <!-- ── Dodaj Obavezu ── -->
+    <string name="title_dodaj_obavezu">Dodaj obavezu</string>
+    <string name="tab_ispit">Ispit</string>
+    <string name="tab_kolokvijum">Kolokvijum</string>
+    <string name="tab_predaja">Predaja</string>
+    <string name="tab_ostalo">Ostalo</string>
+
+    <string name="label_predmet">Predmet</string>
+    <string name="hint_predmet">Baze podataka</string>
+    <string name="label_datum">Datum</string>
+    <string name="hint_datum">23.05.2026.</string>
+    <string name="label_vreme">Vreme</string>
+    <string name="hint_vreme">10:00</string>
+    <string name="label_lokacija">Lokacija</string>
+    <string name="hint_lokacija">npr. Sala 101, FTN</string>
+
+    <string name="btn_tezina_lako">Lako</string>
+    <string name="btn_tezina_srednje">Srednje</string>
+    <string name="btn_tezina_tesko">Teško</string>
+
+    <string name="label_napomena">Napomena</string>
+    <string name="label_napomena_opciono">Napomena (opciono)</string>
+    <string name="hint_napomena">Posebno obratiti pažnju na…</string>
+
+    <string name="btn_nazad">← Nazad</string>
+    <string name="btn_nastavi">Nastavi →</string>
+
+    <!-- Validacijske greške — Dodaj Obavezu -->
+    <string name="error_predmet_empty">Morate uneti predmet</string>
+    <string name="error_datum_empty">Morate uneti datum</string>
+    <string name="error_vreme_empty">Morate uneti vreme</string>
+    <string name="error_lokacija_empty">Morate uneti lokaciju</string>
+
+    <!-- ── Plan učenja ── -->
+    <string name="title_plan_ucenja">Plan učenja</string>
+    <string name="label_napredak_tema">%1$d/%2$d tema</string>   <!-- "4/7 tema" -->
+    <string name="btn_zapocni_ucenje">Započni učenje →</string>
+    <string name="label_zavrseno">Završeno</string>
+    <string name="label_danas">Danas</string>
+    <string name="label_sutra">Sutra</string>
+
 </resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    menu/bottom_nav_menu.xml
+    ─────────────────────────────────────────────
+    Redosled tabova levo → desno kao na dizajnu:
+      Chat | Kalendar | Početna | Prilike | Profil
+
+    Ikone koristiti Material Symbols ili prilagoditi
+    sopstvenim vectorima iz drawable/.
+    Aktivna ikona / tekst: pilot_purple_main (#2D2D6B)
+    Neaktivna:             pilot_gray_text  (#5D5C57)
+    → definisati u res/color/selector_bottom_nav_text.xml
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="Chat" />
+
+    <item
+        android:id="@+id/nav_kalendar"
+        android:icon="@drawable/ic_calendar"
+        android:title="Kalendar" />
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Početna" />
+
+    <item
+        android:id="@+id/nav_prilike"
+        android:icon="@drawable/ic_briefcase"
+        android:title="Prilike" />
+
+    <item
+        android:id="@+id/nav_profil"
+        android:icon="@drawable/ic_person"
+        android:title="Profil" />
+
+</menu>

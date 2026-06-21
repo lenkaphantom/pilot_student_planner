@@ -12,6 +12,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.pilot.R;
 import com.pilot.data.api.TokenManager;
 import com.pilot.databinding.ActivityLoginBinding;
+import com.pilot.ui.home.HomeActivity;
 import com.pilot.ui.onboarding.OnboardingActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -114,8 +115,7 @@ public class LoginActivity extends AppCompatActivity {
     private void navigateAfterLogin(boolean profileComplete) {
         Intent intent;
         if (profileComplete) {
-            // TODO: zameniti sa MainActivity kada bude gotov
-            intent = new Intent(this, OnboardingActivity.class);
+            intent = new Intent(this, HomeActivity.class);
         } else {
             intent = new Intent(this, OnboardingActivity.class);
         }

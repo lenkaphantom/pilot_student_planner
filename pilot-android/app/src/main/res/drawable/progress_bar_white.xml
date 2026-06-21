@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    progress_bar_white.xml
+    ─────────────────────────────────────────────
+    Koristi se unutar tamno-ljubičaste kartice
+    "Nastavi gde si stao" na Home ekranu.
+
+    Track : bijela sa 30% alpha
+    Fill  : bijela puna
+    Oba imaju corner radius 3dp (pill shape)
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Track (pozadina) -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <solid android:color="#4DFFFFFF" />   <!-- bijela, 30% alpha -->
+        </shape>
+    </item>
+
+    <!-- Sekundarni progres (nije korišten, ali mora biti definisan) -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="8dp" />
+                <solid android:color="#00000000" />
+            </shape>
+        </clip>
+    </item>
+
+    <!-- Primarni progres (fill) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="8dp" />
+                <solid android:color="@color/white" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

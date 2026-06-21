@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    color/selector_bottom_nav_text.xml
+    ─────────────────────────────────────────────
+    ColorStateList za bottom navigation ikone i tekst.
+    Koristiti za app:itemTextColor i app:itemIconTint.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Aktivna stavka -->
+    <item
+        android:state_checked="true"
+        android:color="@color/pilot_purple_main" />
+
+    <!-- Neaktivna stavka -->
+    <item
+        android:color="@color/pilot_gray_text" />
+
+</selector>

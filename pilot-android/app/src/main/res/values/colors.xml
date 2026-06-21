@@ -37,4 +37,14 @@
     <color name="colorPrimary">@color/pilot_purple_main</color>
     <color name="colorPrimaryDark">@color/pilot_purple_dark</color>
     <color name="colorAccent">@color/pilot_purple2_main</color>
+
+    <!-- Chips -->
+    <color name="pilot_bg_tirkiz">#E6F1FB</color>
+    <color name="pilot_tirkiz">#4C2BF0</color>
+    <color name="pilot_bg_green">#E1F5EE</color>
+    <color name="pilot_green">#4A5D57</color>
+    <color name="pilot_dark_red">#6F1F1F</color>
+    <color name="pilot_bg_dark_red">#FAEEEE</color>
+    <color name="pilot_yellow">#675630</color>
+    <color name="pilot_bg_yellow">#FAEEDA</color>
 </resources>
