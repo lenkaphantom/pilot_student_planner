@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Pilot" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/pilot_purple_main</item>
+        <item name="colorPrimaryVariant">@color/pilot_purple_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/pilot_purple2_main</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowBackground">@color/pilot_background</item>
+        <item name="android:statusBarColor">@color/pilot_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.Pilot.Splash" parent="Theme.Pilot">
+        <item name="android:windowBackground">@color/pilot_splash_bg</item>
+        <item name="android:statusBarColor">@color/pilot_splash_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ========================================
+         Tipografija — Figma koristi Inter/system
+    ======================================== -->
+
+    <style name="TextAppearance.Pilot" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/pilot_dark</item>
+    </style>
+
+    <style name="TextAppearance.Pilot.Title" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/pilot_dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="TextAppearance.Pilot.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/pilot_gray_text</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+    <style name="TextAppearance.Pilot.Link">
+        <item name="android:textColor">@color/pilot_purple2_main</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- ========================================
+         Input polja — replika Figma dizajna
+         Svetla pozadina, rounded corners, nema border po defaultu
+    ======================================== -->
+
+    <style name="Widget.Pilot.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeColor">@color/pilot_purple2_main</item>
+        <item name="boxStrokeWidth">1.5dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="hintTextColor">@color/pilot_gray_text</item>
+        <item name="android:paddingTop">4dp</item>
+    </style>
+
+    <style name="Widget.Pilot.TextInputLayout.Password" parent="Widget.Pilot.TextInputLayout">
+        <item name="passwordToggleEnabled">true</item>
+        <item name="passwordToggleTint">@color/pilot_gray_text</item>
+    </style>
+
+    <!-- ========================================
+         Dugmad — Figma: puno rounded, deep purple fill
+    ======================================== -->
+
+    <style name="Widget.Pilot.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/pilot_purple2_main</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="rippleColor">@color/pilot_purple_main</item>
+    </style>
+
+    <style name="Widget.Pilot.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/pilot_gray_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="rippleColor">@color/transparent</item>
+    </style>
+
+    <!-- Progress bar za onboarding korake -->
+    <style name="Widget.Pilot.ProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressTint">@color/pilot_purple2_main</item>
+        <item name="android:progressBackgroundTint">@color/pilot_gray_surface</item>
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary purple ramp -->
+    <color name="pilot_purple_light">#EBEBF5</color>   <!-- #EBEBF5 ↑ -->
+    <color name="pilot_purple_mid">#9898CF</color>     <!-- #9898CF ↑ -->
+    <color name="pilot_purple_main">#2D2D6B</color>    <!-- #2D2D6B ↑ — primary akcija -->
+    <color name="pilot_purple_dark">#131335</color>
+
+    <!-- Secondary purple ramp -->
+    <color name="pilot_purple2_main">#534AB7</color>   <!-- #534AB7 ↑ — buttons, links -->
+    <color name="pilot_purple2_light">#F0F0FA</color>
+
+    <!-- Neutral gray ramp -->
+    <color name="pilot_background">#F5F4F1</color>      <!-- #F5F4F1 ↑ — pozadina ekrana -->
+    <color name="pilot_gray_bg">#F5F4F1</color>         <!-- #F5F4F1 ↑ — alternativna pozadina -->
+    <color name="pilot_gray_surface">#CFCCC2</color>   <!-- #CFCCC2 ↑ — input pozadina -->
+    <color name="pilot_gray_border">#817F79</color>    <!-- #817F79 ↑ — ivice inputa -->
+    <color name="pilot_gray_text">#5D5C57</color>      <!-- #5D5C57 ↑ — sekundarni tekst -->
+    <color name="pilot_gray_dark">#3C3B38</color>      <!-- #3C3B38 ↑ -->
+    <color name="pilot_dark">#1D1C1B</color>           <!-- #1D1C1B ↑ — primarni tekst -->
+
+    <!-- Semantic — success, error -->
+    <color name="pilot_error">#E24B4A</color>
+    <color name="pilot_error_light">#FAEEEE</color>
+    <color name="pilot_success">#1D9E75</color>
+    <color name="pilot_warning">#EF9F27</color>
+
+    <!-- Splash screen -->
+    <color name="pilot_splash_bg">#2D2D6B</color>
+
+    <!-- Convenience aliases -->
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+
+    <!-- Material theme maping -->
+    <color name="colorPrimary">@color/pilot_purple_main</color>
+    <color name="colorPrimaryDark">@color/pilot_purple_dark</color>
+    <color name="colorAccent">@color/pilot_purple2_main</color>
+</resources>

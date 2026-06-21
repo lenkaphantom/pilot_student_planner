@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Čitanje local.properties
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withInputStream { stream ->
+        localProperties.load(stream)
+    }
+}
+
+// Dobijanje API_HOST iz local.properties, sa fallback vrednoscu
+def apiHost = localProperties.getProperty('API_HOST', 'http://10.0.2.2:8080/api/')
+
+android {
+    namespace 'com.pilot'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.pilot"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        // Backend URL — čita se iz local.properties
+        buildConfigField "String", "BASE_URL", '"' + apiHost + '"'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    lint {
+        disable 'MissingTranslation'
+        abortOnError false
+    }
+}
+
+dependencies {
+    // AndroidX
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.activity:activity:1.9.0'
+    implementation 'androidx.core:core:1.13.1'
+
+    // Retrofit + Gson (HTTP klijent)
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+
+    // EncryptedSharedPreferences (bezbedan token storage)
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+}
