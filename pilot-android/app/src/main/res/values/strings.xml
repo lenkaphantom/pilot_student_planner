@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PILOT</string>
+
+    <!-- Login -->
+    <string name="label_email">Email</string>
+    <string name="label_password">Lozinka</string>
+    <string name="hint_email">example@uns.ac.rs</string>
+    <string name="hint_password">········</string>
+    <string name="btn_show_password">Prikaži</string>
+    <string name="btn_hide_password">Sakri</string>
+    <string name="btn_login">Prijavi se →</string>
+    <string name="link_forgot_password">Zaboravljena lozinka?</string>
+    <string name="link_register">Registruj se</string>
+    <string name="text_no_account">Nemaš nalog?</string>
+
+    <!-- Register -->
+    <string name="title_register">Kreiraj nalog</string>
+    <string name="label_full_name">Ime i prezime</string>
+    <string name="hint_full_name">Petra Petrović</string>
+    <string name="label_confirm_password">Potvrdi lozinku</string>
+    <string name="btn_register">Nastavi ka podešavanju →</string>
+    <string name="link_skip_setup">Preskoči podešavanja, uđi direktno →</string>
+    <string name="text_skip_note">Uvek možeš uneti podatke kasnije u sekciji Profil</string>
+    <string name="text_have_account">Već imaš nalog?</string>
+    <string name="link_login">Prijavi se</string>
+
+    <!-- Greške -->
+    <string name="error_email_empty">Email je obavezan.</string>
+    <string name="error_email_invalid">Email nije u ispravnom formatu.</string>
+    <string name="error_password_empty">Lozinka je obavezna.</string>
+    <string name="error_password_short">Lozinka mora imati najmanje 8 karaktera.</string>
+    <string name="error_passwords_mismatch">Lozinke se ne poklapaju.</string>
+    <string name="error_name_empty">Ime i prezime su obavezni.</string>
+    <string name="error_generic">Došlo je do greške. Pokušajte ponovo.</string>
+    <string name="error_no_internet">Nema internet konekcije.</string>
+    <string name="pilot_logo">PILOT logo</string>
+    <string name="nazad">Nazad</string>
+</resources>
