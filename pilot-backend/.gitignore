@@ -44,3 +44,5 @@ logs/
 junit-platform-suite-json-reports/
 
 application-local.properties
+
+src/main/java/com/pilot/config/DataInitializer.java
