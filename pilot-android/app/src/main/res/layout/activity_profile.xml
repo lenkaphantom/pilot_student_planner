@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pilot_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="110dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    app:cardCornerRadius="45dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@android:drawable/ic_menu_camera"
+                        app:tint="@color/pilot_purple_main" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="Petra Petrović"
+                    android:textColor="@color/pilot_dark"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/inter_bold" />
+
+                <TextView
+                    android:id="@+id/tv_profile_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:text="FTN · Softversko inženjerstvo · 3. godina"
+                    android:textColor="@color/pilot_gray_text"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_regular" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/banner_popunjenost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#EEEDF9">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toStartOf="@id/btn_zavrsi"
+                            android:layout_marginEnd="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Profil je 40% popunjen"
+                                android:textColor="@color/pilot_purple_main"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/inter_bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="Dodaj interesovanja za bolje preporuke"
+                                android:textColor="@color/pilot_gray_text"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/inter_regular" />
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_zavrsi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text="Završi"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textAllCaps="false"
+                            app:backgroundTint="@color/pilot_purple_main"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:paddingVertical="18dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="6 predmeta"
+                            android:textColor="@color/pilot_purple_main"
+                            android:fontFamily="@font/inter_bold"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/pilot_gray_surface"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="3 ispita"
+                            android:textColor="@color/pilot_purple_main"
+                            android:fontFamily="@font/inter_bold"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/pilot_gray_surface"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="12 prilika"
+                            android:textColor="@color/pilot_purple_main"
+                            android:fontFamily="@font/inter_bold"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingVertical="4dp">
+
+                        <RelativeLayout
+                            android:id="@+id/row_predmeti"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:paddingHorizontal="16dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Moji predmeti i ciljevi"
+                                android:textColor="@color/pilot_dark"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/inter_regular" />
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@android:drawable/ic_media_play"
+                                app:tint="@color/pilot_purple_main" />
+                        </RelativeLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/pilot_gray_surface" android:layout_marginHorizontal="16dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/row_interesovanja"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:paddingHorizontal="16dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Interesovanja"
+                                android:textColor="@color/pilot_dark"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/inter_regular" />
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@android:drawable/ic_media_play"
+                                app:tint="@color/pilot_purple_main" />
+                        </RelativeLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/pilot_gray_surface" android:layout_marginHorizontal="16dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/row_pracene_prilike"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:paddingHorizontal="16dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Praćene prilike"
+                                android:textColor="@color/pilot_dark"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/inter_regular" />
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@android:drawable/ic_media_play"
+                                app:tint="@color/pilot_purple_main" />
+                        </RelativeLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/pilot_gray_surface" android:layout_marginHorizontal="16dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/row_push"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:paddingHorizontal="16dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Push notifikacije"
+                                android:textColor="@color/pilot_dark"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/inter_regular" />
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@android:drawable/ic_media_play"
+                                app:tint="@color/pilot_purple_main" />
+                        </RelativeLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/pilot_gray_surface" android:layout_marginHorizontal="16dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/row_email_notif"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:paddingHorizontal="16dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Email notifikacije"
+                                android:textColor="@color/pilot_dark"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/inter_regular" />
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@android:drawable/ic_media_play"
+                                app:tint="@color/pilot_purple_main" />
+                        </RelativeLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/pilot_gray_surface" android:layout_marginHorizontal="16dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/row_licni_podaci"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:paddingHorizontal="16dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Lični podaci"
+                                android:textColor="@color/pilot_dark"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/inter_regular" />
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@android:drawable/ic_media_play"
+                                app:tint="@color/pilot_purple_main" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/btn_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginEnd="6dp"
+                        android:src="@android:drawable/ic_lock_power_off"
+                        app:tint="#FF4D4D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Odjavi se"
+                        android:textColor="#FF4D4D"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/inter_semibold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/pilot_gray_surface" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            style="@style/Widget.Pilot.BottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:background="@color/white"
+            android:paddingBottom="27dp"
+            app:menu="@menu/bottom_nav_menu"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@color/selector_bottom_nav_text"
+            app:itemIconTint="@color/selector_bottom_nav_text" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

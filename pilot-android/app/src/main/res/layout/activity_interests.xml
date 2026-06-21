@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pilot_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="110dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/pilot_gray_surface" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selektovane oblasti koriste se za personalizaciju AI odgovora i filtriranje prilika"
+                    android:textColor="@color/pilot_gray_text"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/inter_regular"
+                    android:lineSpacingMultiplier="1.2"
+                    android:layout_marginBottom="28dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tehnička interesovanja"
+                    android:textColor="@color/pilot_dark"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/inter_semibold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/pilot_gray_surface"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="16dp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:alignmentMode="alignBounds"
+                    android:columnOrderPreserved="false"
+                    android:layout_marginBottom="28dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_dashed_purple"
+                        android:backgroundTint="#EEEDF9"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✓ Web razvoj"
+                            android:textColor="@color/pilot_purple_main"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/inter_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_dashed_purple"
+                        android:backgroundTint="#EEEDF9"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✓ AI / ML"
+                            android:textColor="@color/pilot_purple_main"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/inter_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bg_dashed_purple"
+                        android:backgroundTint="@color/white"
+                        app:strokeColor="@color/pilot_gray_surface"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mobilne app"
+                            android:textColor="@color/pilot_gray_text"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/inter_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_dashed_purple"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+ Dodaj opciju"
+                            android:textColor="@color/pilot_gray_text"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/inter_medium" />
+                    </LinearLayout>
+                </GridLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ostala interesovanja"
+                    android:textColor="@color/pilot_dark"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/inter_semibold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/pilot_gray_surface"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="16dp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:alignmentMode="alignBounds"
+                    android:columnOrderPreserved="false"
+                    android:layout_marginBottom="36dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_dashed_purple"
+                        android:backgroundTint="#EEEDF9"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✓ Freelance"
+                            android:textColor="@color/pilot_purple_main"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/inter_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_dashed_purple"
+                        android:backgroundTint="#EEEDF9"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✓ Aktivizam"
+                            android:textColor="@color/pilot_purple_main"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/inter_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bg_dashed_purple"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nauka"
+                            android:textColor="@color/pilot_gray_text"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/inter_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_dashed_purple"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+ Dodaj opciju"
+                            android:textColor="@color/pilot_gray_text"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/inter_medium" />
+                    </LinearLayout>
+                </GridLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Sačuvaj izmene"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    app:backgroundTint="@color/pilot_purple_main"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/pilot_gray_surface" />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            style="@style/Widget.Pilot.BottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:background="@color/white"
+            android:paddingBottom="27dp"
+            app:menu="@menu/bottom_nav_menu"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@color/selector_bottom_nav_text"
+            app:itemIconTint="@color/selector_bottom_nav_text" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
