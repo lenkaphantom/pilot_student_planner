@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Koje prilike te zanimaju?"
+            android:textColor="#1D1C1B"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="24dp"
+            android:text="Dobijаš notifikacije samo za ono što si izabrao/la"
+            android:textColor="#5A5855"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.4"/>
+
+        <!-- Toggle redovi — svaki je include sa id-em koji koristimo u fragmentu -->
+        <include android:id="@+id/rowInternship"   layout="@layout/item_toggle_row"/>
+        <include android:id="@+id/rowScholarships" layout="@layout/item_toggle_row"/>
+        <include android:id="@+id/rowExchange"     layout="@layout/item_toggle_row"/>
+        <include android:id="@+id/rowCompetitions" layout="@layout/item_toggle_row"/>
+        <include android:id="@+id/rowVolunteering" layout="@layout/item_toggle_row"/>
+        <include android:id="@+id/rowStudentOrgs"  layout="@layout/item_toggle_row"/>
+
+        <!-- Hitnost prakse — vidljivo samo kad je internship uključen -->
+        <LinearLayout
+            android:id="@+id/layoutInternshipUrgency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Da li tražiš praksu u narednih 6 meseci?"
+                android:textColor="#1D1C1B"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupUrgency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipUrgencyYes"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Da, aktivno"
+                    android:checked="true"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipUrgencyMaybe"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Možda"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipUrgencyNo"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ne još"/>
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            android:indeterminateTint="#534AB7"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            style="@style/Widget.Pilot.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Nastavi →"/>
+
+        <TextView
+            android:id="@+id/tvSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:text="Preskoči ovaj korak"
+            android:textColor="#5A5855"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>

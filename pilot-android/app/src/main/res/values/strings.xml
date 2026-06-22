@@ -128,4 +128,18 @@
     <string name="label_danas">Danas</string>
     <string name="label_sutra">Sutra</string>
 
+    <!-- ── Onboarding Step1 ── -->
+    <string name="smer_studijski_program">Smer / Studijski program</string>
+    <string name="izaberite_smer">Unesite smer…</string>
+    <string name="godina_studija">Godina studija</string>
+    <string name="nastavi">Nastavi →</string>
+    <string name="presko_i_ovaj_korak">Preskoči ovaj korak</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="m">M</string>
+    <string name="d">D</string>
+
 </resources>
