@@ -109,7 +109,15 @@ public class HomeActivity extends AppCompatActivity {
             if (id == R.id.nav_home) {
                 return true; // već smo ovde
             }
-            // TODO: dodati navigaciju na ostale ekrane kad budu gotovi
+
+            // povezivanje na profil
+            else if (id == R.id.nav_profil) {
+                android.content.Intent intent = new android.content.Intent(HomeActivity.this, com.pilot.ui.profile.ProfileActivity.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+                return true;
+            }
+
             Toast.makeText(this, "Uskoro...", Toast.LENGTH_SHORT).show();
             return false;
         });

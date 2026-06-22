@@ -112,6 +112,16 @@
         <item name="android:textSize">14sp</item>
         <item name="checkedIconVisible">false</item>
         <item name="chipMinHeight">40dp</item>
+    <style name="YearInfoStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginHorizontal">3dp</item>
+        <item name="android:background">@drawable/bg_dashed_purple</item>
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/pilot_gray_text</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
 </resources>
