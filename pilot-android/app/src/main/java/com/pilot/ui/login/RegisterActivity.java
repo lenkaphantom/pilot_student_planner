@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.pilot.R;
+import com.pilot.data.api.TokenManager;
 import com.pilot.databinding.ActivityRegisterBinding;
 import com.pilot.ui.home.HomeActivity;
 import com.pilot.ui.onboarding.OnboardingActivity;
@@ -29,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
     private RegisterViewModel viewModel;
 
     private boolean skipSetup = false;
+    private boolean alreadyNavigated = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,11 @@ public class RegisterActivity extends AppCompatActivity {
 
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Ako smo već registrovani i vratili se sa OnboardingActivity, resetuj flag
+        if (savedInstanceState != null) {
+            alreadyNavigated = false;
+        }
 
         viewModel = new ViewModelProvider(this).get(RegisterViewModel.class);
 
@@ -57,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
             submitForm();
         });
 
-        // "Preskoči podešavanja, uđi direktno →"
+        // "Preskoči podešavanja, uđi direktno →" — registruj sa unetim vrijednostima, direktno na Home
         binding.tvSkipSetup.setOnClickListener(v -> {
             skipSetup = true;
             submitForm();
@@ -121,7 +128,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void setLoading(boolean loading) {
-        binding.progressBar.setVisibility(loading ? View.VISIBLE : View.GONE);
+        binding.progressBarLoading.setVisibility(loading ? View.VISIBLE : View.GONE);
         binding.btnRegister.setEnabled(!loading);
         binding.tvSkipSetup.setEnabled(!loading);
         binding.etFullName.setEnabled(!loading);
@@ -138,10 +145,21 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void navigateAfterRegister() {
+        // Sprječava da se navigacija odvija više puta kada se vratimo sa OnboardingActivity
+        if (alreadyNavigated) {
+            return;
+        }
+        alreadyNavigated = true;
+
         Intent intent;
         if (skipSetup) {
+            // Korisnik je preskočio onboarding - direktno na Home
+            // Označi profil kao kompletan jer se registracija završila
+            TokenManager.getInstance(this).markProfileComplete();
             intent = new Intent(this, HomeActivity.class);
         } else {
+            // Korisnik je odabrao "Nastavi ka podešavanju" - idi na OnboardingActivity
+            // Profil će biti označen kao kompletan nakon što završi sve korake
             intent = new Intent(this, OnboardingActivity.class);
         }
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

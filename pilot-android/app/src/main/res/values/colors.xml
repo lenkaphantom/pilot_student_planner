@@ -15,6 +15,7 @@
     <color name="pilot_gray_bg">#F5F4F1</color>         <!-- #F5F4F1 ↑ — alternativna pozadina -->
     <color name="pilot_gray_surface">#CFCCC2</color>   <!-- #CFCCC2 ↑ — input pozadina -->
     <color name="pilot_gray_border">#817F79</color>    <!-- #817F79 ↑ — ivice inputa -->
+    <color name="pilot_light_gray">#E5E4E0</color>     <!-- #E5E4E0 ↑ — separator линије -->
     <color name="pilot_gray_text">#5D5C57</color>      <!-- #5D5C57 ↑ — sekundarni tekst -->
     <color name="pilot_gray_dark">#3C3B38</color>      <!-- #3C3B38 ↑ -->
     <color name="pilot_dark">#1D1C1B</color>           <!-- #1D1C1B ↑ — primarni tekst -->

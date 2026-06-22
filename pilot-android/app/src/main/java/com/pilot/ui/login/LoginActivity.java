@@ -24,9 +24,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Ako je korisnik vec ulogovan, preskoci login
+        // Ako je korisnik već ulogovan (ima access token), direktno idi na Home
         if (TokenManager.getInstance(this).isLoggedIn()) {
-            navigateAfterLogin(TokenManager.getInstance(this).isProfileComplete());
+            navigateAfterLogin(true);
             return;
         }
 
@@ -113,12 +113,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void navigateAfterLogin(boolean profileComplete) {
-        Intent intent;
-        if (profileComplete) {
-            intent = new Intent(this, HomeActivity.class);
-        } else {
-            intent = new Intent(this, OnboardingActivity.class);
-        }
+        // VAŽNO: Nakon prijave, UVIJEK idi na HomeActivity
+        // Onboarding je opciono i trebao bi se desiti SAMO tijekom registracije
+        // Ako korisnik nije završio onboarding tijekom registracije, može da ga završi
+        // kasnije kroz profil stranicu
+
+        Intent intent = new Intent(this, HomeActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();

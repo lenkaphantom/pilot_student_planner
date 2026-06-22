@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recite nam o sebi"
+            android:textColor="#1D1C1B"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="28dp"
+            android:text="Koristimo ove podatke da personalizujemo vaše iskustvo"
+            android:textColor="#5A5855"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.4"/>
+
+        <!-- Fakultet -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="Fakultet"
+            android:textColor="#1D1C1B"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFaculty"
+            style="@style/Widget.Pilot.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Unesite fakultet...">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:paddingVertical="14dp"
+                android:textSize="15sp"
+                android:textColor="#1D1C1B"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Smer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="6dp"
+            android:text="@string/smer_studijski_program"
+            android:textColor="#1D1C1B"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilStudyProgram"
+            style="@style/Widget.Pilot.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/izaberite_smer">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStudyProgram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:paddingVertical="14dp"
+                android:textSize="15sp"
+                android:textColor="#1D1C1B"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Godina studija -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/godina_studija"
+            android:textColor="#1D1C1B"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_1"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3"
+                android:checked="true"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_5"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipM"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/m"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipD"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/d"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            android:indeterminateTint="#534AB7"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            style="@style/Widget.Pilot.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/nastavi"/>
+
+        <TextView
+            android:id="@+id/tvSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:text="@string/presko_i_ovaj_korak"
+            android:textColor="#5A5855"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>
